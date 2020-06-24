@@ -20,4 +20,5 @@ urlpatterns = [
     url(r'^order/none/$', views.ordernone,name='ordernone'),
     url(r'^favorite/$', views.favorite,name='favorite'),
     url(r'^favoritetype/$', views.favoritetype,name='favoritetype'),
+    # url(r'^favoritetype/$', views.favoritetype,name='favoritetype'),
 ]
