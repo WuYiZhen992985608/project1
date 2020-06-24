@@ -1,0 +1,213 @@
+#home{
+    padding:1.5rem 0 1.5rem;
+    font-family:"Microsoft YaHei","Helvetica Neue",Helvetica,STHeiTi,Arial,sans-serif;
+    /*overflow:auto;*/
+    overflow-x:hidden;
+    overflow-y:auto;
+    hegight:100%;
+    width:100%;
+    /*padding-bottom:3rem;*/
+    /*position:fixed;*/
+    /*background-color: blue;*/
+}
+
+#topSwiper{
+    height:3.95rem;
+    width:10rem;
+    overflow-x:hidden;
+    overflow-y:auto;
+    /*background-color: blue;*/
+
+}
+#topSwiper div a{
+    float:left;
+    /*diaplay:inline-block;*/
+    height:3.95rem;
+    width:10rem;
+    /*background-color: green;*/
+}
+#topSwiper img{
+    width:100%;
+    height:100%;
+    /*bcakground-size:contain;*/
+    /*background-color: red;*/
+}
+#topMenu{
+    padding-bottom:0.1rem;
+    background-color: #fff;
+    /*overflow-y:auto;*/
+
+
+}
+#topMenu nav{
+    margin:0.1rem 0 ;
+    background: white;
+
+}
+#topMenu nav ul{
+    display:flex;
+}
+#topMenu nav li{
+    width:2.5rem;
+    text-align: center;
+    font-size:0.35rem;
+
+}
+#topMenu nav li img{
+    width:2.5rem;
+}
+
+#swiperMenu{
+    width:100%;
+
+
+}
+#swiperMenu li img{
+    width:3.2rem;
+    /*background-color: blue;*/
+}
+
+#CVS{
+    /*overflow-y:auto;*/
+}
+fieldset div{
+    width:50%;
+    height:2rem;
+    /*background-color: red;*/
+    /*background-image: url('/static/home/img/20001.jpg');*/
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size:contain;
+}
+fieldset div,fieldset a{
+    float:left;
+}
+
+fieldset a{
+    text-indent: 0.2rem;
+    line-height: 2rem;
+    font-size:0.5rem;
+    /*background-color: #bce8f1;*/
+    opacity: 0.8;
+}
+#CVS ul li{
+    width:2.5rem;
+    float:left;
+    /*background-color: red;*/
+    text-align:center;
+    position:relative;
+
+}
+#CVS ul span{
+    font-size:0.5rem;
+    background-color: #bce8f1;
+    position:absolute;
+    left:0.5rem;
+    top:2.6rem;
+    opacity: 0.5;
+}
+#olblock{
+    width:100%;
+    height:3.2rem;
+    /*background-color: red;*/
+}
+
+#CVS ol li{
+    width:50%;
+    float:left;
+    background-color: #eeeeee;
+    text-indent: 0.2rem;
+    font-size:0.3rem;
+    line-height: 2.5rem;
+    /*position:relative;*/
+    /*background-image: url('/static/home/img/20001.jpg');*/
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size:contain;
+    /*overflow:hidden;*/
+}
+#CVS ol img{
+    float:right;
+}
+#CVS li div{
+    width:50%;
+    overflow:hidden;
+}
+#mainInfo{
+    width:100%;
+}
+#mainInfo .shopheader{
+    width:100%;
+    height:2rem;
+}
+#mainInfo .shopheader span{
+    text-indent: 3rem;
+    color:green;
+    font-size:1rem;
+    /*background-color: blue;*/
+    float:left;
+}
+#mainInfo .shopheader a{
+    text-indent: 8.5rem;
+    font-size:0.2rem;
+    /*background-color: red;*/
+    float:left;
+}
+#mainInfo ul{
+    width:100%;
+    height:5rem;
+}
+#mainInfo ul li{
+    float:left;
+    width:33%;
+    background-color: #eee;
+    text-overflow: ellipsis;
+}
+#mainInfo ul img{
+    width:100%;
+    height:3rem;
+    background-size:contain;
+}
+#mainInfo ul .description{
+    height:1rem;
+    font-size:0.4rem;
+    /*background-color: blue;*/
+}
+#mainInfo ul .description+p{
+    /*background-color: yellow;*/
+    height:0.6rem;
+    font-size:0.4rem;
+    float:left
+}
+#mainInfo ul s{
+    width:1.5rem;
+    height:0.3rem;
+    font-size:0.3rem;
+    /*background-color: blue;*/
+    float:left;
+}
+#mainInfo ul button{
+    float:right;
+    /*vertical-align: bottom;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

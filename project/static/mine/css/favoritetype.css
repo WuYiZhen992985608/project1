@@ -1,0 +1,80 @@
+#favoritetype{
+    width:100%;
+    height:100%;
+    /*background-color: red;*/
+    position:absolute;
+    padding-top:1.5rem;
+    padding-bottom:1.5rem;
+    overflow:auto;
+}
+
+
+/*#market section menu::-webkit-scrollbar {*/
+    /*diaplay: none;*/
+/*}*/
+
+ul {
+    position: relative;
+    /*background: red;*/
+}
+
+ul li {
+    background: white;
+    border-bottom: 0.04rem solid #e0e0e0;
+    position: relative;
+}
+
+ul li a {
+    display: block;
+    height: 3rem;
+    /*background-color: red;*/
+}
+
+ul li a img {
+    display: block;
+    width: 2.8rem;
+    float: left;
+}
+.shoppingInfo {
+    width: 4.5rem;
+    float: left;
+    font-size: 0.35rem;
+    /*background-color: red;*/
+}
+
+.shoppingInfo h6 {
+    margin: 0.1rem 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 0.5rem;
+    white-space: nowrap;
+    line-height: 0.5rem;
+    font-weight: 500;
+    font-size: 0.35rem;
+    /*background-color: red;*/
+    /*border:1px solid red;*/
+}
+.detailTag {
+    margin: 0.2rem 0;
+}
+/*.detailTag > span:last-child{*/
+    /*color:yellow;*/
+/*}*/
+.detailTag #gived{
+    background: red;
+    color: white;
+    border: 0.05rem solid red;
+    border-radius: 0.15rem;
+    padding: 0 0.1rem;
+    margin-right: 0.3rem;
+}
+/*细节标签*/
+.detailTag #selected {
+    background: white;
+    color: red;
+    /*display:none;*/
+    border: 0.05rem solid red;
+    border-radius: 0.15rem;
+    padding: 0 0.1rem;
+    margin-right: 0.3rem;
+}

@@ -1,0 +1,36 @@
+#orderlist{
+    width:100%;
+    height:100%;
+    /*background-color: red;*/
+    position:absolute;
+    padding-top:1.5rem;
+    padding-bottom:1.5rem;
+    overflow:auto;
+}
+#orderlist > ul{
+    width:100%;
+}
+#orderlist > ul >li{
+    /*margin:5px 0 0;*/
+    width:100%;
+    height:2rem;
+    font-size:0.5rem;
+    border-bottom: 5px solid #b4ff9c;
+}
+#orderlist > div:first-child{
+    border-top: 5px solid #b4ff9c;
+    width:100%;
+}
+#orderlist > ul >li > a > div span{
+    float:left;
+    height:1rem;
+    width:25%;
+    /*background-color: red;*/
+    line-height: 1rem;
+    text-align: right;
+}
+#orderlist > ul >li > a > div span:last-child{
+    text-align: left;
+    /*background-color: blue;*/
+    width:75%;
+}

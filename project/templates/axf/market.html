@@ -1,0 +1,91 @@
+{% extends 'axf/base.html' %}
+{% load static from staticfiles %}
+{% block linkscript %}
+    <link rel="stylesheet" type="text/css" href="{% static 'market/css/market.css' %}"/>
+{% endblock linkscript %}
+
+{% block base %}
+    <div id="market">
+        <aside>
+            <menu>
+                <ul>
+                    {% for item in leftSliter %}
+                        <li>
+                            <span class="yellowSlide"></span>
+                            <a href="/market/{{ item.typeid }}/0/0/" class="ayellow">{{ item.typename }}</a>
+                        </li>
+
+                    {% endfor %}
+
+                </ul>
+            </menu>
+        </aside>
+        <section>
+            <nav>
+                <ul>
+                    <li><span id="alltypebtn">全部类型<span class="glyphicon glyphicon-chevron-down"
+                                                        style="..."></span></span></li>
+                    <li><span id="showsortbtn">综合排序<span class="glyphicon glyphicon-chevron-down"
+                                                     style="..."></span></span></li>
+                </ul>
+            </nav>
+            <menu>
+                <ul>
+                    {% for item in productlist %}
+                        <li>
+                            <a href="#">
+                                <img src="{{ item.productimg }}"/>
+                                <article class="shoppingInfo">
+                                    <h6>{{ item.productlongname }}</h6>
+                                    <p class="detailTag">
+                                        {% if item.isxf %}
+                                            <span id="selected">精选</span>
+                                        {% else %}
+                                            <span></span>
+                                        {% endif %}
+                                        {% if item.pmdesc == '1' %}
+                                            <span id="gived">买一送一</span>
+                                        {% else %}
+                                            <span></span>
+                                        {% endif %}
+                                        <span class="glyphicon glyphicon-heart" id="{{ item.productid }}glyphicon-heart" style="color:red"></span>
+
+                                    </p>
+                                    <span class="unit">{{ item.specifics }}</span>
+                                    <p class="price">
+                                        <span>￥{{ item.price }}</span>
+                                        {% if item.marketprice %}
+                                        <s><span>￥{{ item.marketprice }}</span></s></p>
+                                        {% endif %}
+                                </article>
+                            </a>
+                            <section>
+                                <button ga="{{ item.productid }}" class="subShopping"><div class="symbol1">-</div></button>
+                                <span id="{{ item.productid }}">{{ item.num|default:0}}</span>
+                                <button ga="{{ item.productid }}" class="addShopping"><div class="symbol2">+</div></button>
+                            </section>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <div id="typediv">
+                <div>
+                    {% for item in childlist %}
+                            <a href="/market/{{ categoryid }}/{{ item.childcid}}/0/"><span>{{ item.childcidname }}</span></a>
+                    {% endfor %}
+                </div>
+                </div>
+                <div id="sortdiv">
+                    <div>
+                            <a href="/market/{{ categoryid }}/{{ cid }}/0/" class="sorta"><span>综合排序</span></a>
+                            <a href="/market/{{ categoryid }}/{{ cid }}/1/" class="sorta"><span>销量排序</span></a>
+                            <a href="/market/{{ categoryid }}/{{ cid }}/2/" class="sorta"><span>价格排序</span></a>
+                            <a href="/market/{{ categoryid }}/{{ cid }}/3/" class="sorta"><span>新品上架</span></a>
+                    </div>
+                </div>
+            </menu>
+
+        </section>
+    </div>
+    <script type="text/javascript" charset="utf-8" src="{% static 'market/js/market.js' %}"></script>
+
+{% endblock base %}

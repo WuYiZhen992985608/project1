@@ -1,0 +1,23 @@
+{% extends 'axf/base.html' %}
+{% load static from staticfiles %}
+{% block linkscript %}
+    <link rel="stylesheet" type="text/css" href="{% static 'mine/css/orderlist.css' %}"/>
+    <script type="text/javascript" charset="utf-8" src="{% static 'mine/js/orderlist.js' %}"></script>
+{% endblock linkscript %}
+
+{% block base %}
+<div id="orderlist">
+<div></div>
+<ul>
+    {% for item in orders %}
+    <li>
+        <a href="/order/{{ item.orderid }}/">
+            <div><span>订单号:</span><span>{{ item.orderid }}</span></div>
+        <div><span>进度:</span><span>{{ item.progress }}</span></div>
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'axf:mine' %}"><p>点我</p></a>
+</div>
+{% endblock base %}

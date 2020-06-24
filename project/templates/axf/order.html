@@ -1,0 +1,27 @@
+{% extends 'axf/base.html' %}
+{% load static from staticfiles %}
+{% block linkscript %}
+    <link rel="stylesheet" type="text/css" href="{% static 'mine/css/order.css' %}"/>
+    <script type="text/javascript" charset="utf-8" src="{% static 'mine/js/order.js' %}"></script>
+{% endblock linkscript %}
+
+{% block base %}
+<div id="order">
+<div></div>
+<ul>
+    {% for item in cartlist %}
+    <li id="{{ item.productid }}li" class="menulist">
+        <img src="{{ item.productimg }}"/>
+        <p id="firstp">{{ item.productname }}</p>
+        <p class="productprice">价格:{{ item.productprice }}</p>
+        <p class="productnum">数量:{{ item.productnum }}</p>
+    </li>
+    {% endfor %}
+
+</ul>
+<section>
+    <a id="otherOrders" href="{% url 'axf:orderlist' %}">看其它订单</a>
+    <a id="nextorder" href="/order/{{ nextorderid }}/">下一个订单</a>
+</section>
+</div>
+{% endblock base %}

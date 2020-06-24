@@ -1,0 +1,46 @@
+{% extends 'axf/base.html' %}
+{% load static from staticfiles %}
+{% block linkscript %}
+    <link rel="stylesheet" type="text/css" href="{% static 'mine/css/favoritetype.css' %}"/>
+{% endblock linkscript %}
+
+{% block base %}
+<div id="favoritetype">
+<div></div>
+<ul>
+                    {% for item in productlist %}
+                        <li>
+                            <a href="#">
+                                <img src="{{ item.productimg }}"/>
+                                <article class="shoppingInfo">
+                                    <h6>{{ item.productlongname }}</h6>
+                                    <p class="detailTag">
+                                        {% if item.isxf %}
+                                            <span id="selected">精选</span>
+                                        {% else %}
+                                            <span></span>
+                                        {% endif %}
+                                        {% if item.pmdesc == '1' %}
+                                            <span id="gived">买一送一</span>
+                                        {% else %}
+                                            <span></span>
+                                        {% endif %}
+                                        {% if item.productid in fidlist %}
+                                        <span class="glyphicon glyphicon-heart" id="{{ item.productid }}glyphicon-heart" style="color:red"></span>
+                                        {% else %}
+                                        <span class="glyphicon glyphicon-heart" id="{{ item.productid }}glyphicon-heart" style="color:yellow"></span>
+                                        {% endif %}
+                                    </p>
+                                    <span class="unit">{{ item.specifics }}</span>
+                                    <p class="price">
+                                        <span>￥{{ item.price }}</span>
+                                        {% if item.marketprice %}
+                                        <s><span>￥{{ item.marketprice }}</span></s></p>
+                                        {% endif %}
+                                </article>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+</div>
+{% endblock base %}

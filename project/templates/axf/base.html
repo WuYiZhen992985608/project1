@@ -1,0 +1,64 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/swiper.min.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/reset.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/base.css' %}"/>
+
+    <script type="text/javascript" charset="utf-8" src="{% static 'main/js/jquery-3.1.1.min.js' %}"></script>
+    <script type="text/javascript" charset="utf-8" src="{% static 'main/js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" charset="utf-8" src="{% static 'main/js/swiper.min.js' %}"></script>
+    <script type="text/javascript" charset="utf-8" src="{% static 'main/js/base.js' %}"></script>
+
+    {% block linkscript %}
+    {% endblock linkscript %}
+
+
+</head>
+<body>
+<header id="header">
+    <div id="bg1" class="bg"><div></div></div>
+    <div id="bg2" class="bg"><div></div></div>
+</header>
+<div id="box">
+    {% block base %}
+    {% endblock base %}
+</div>
+<footer id="footer">
+    <a id="footerhome" class="footer_a" href="{% url 'axf:home' %}">
+        <dl>
+            <dt><span id="footer_span1" class="footer_span" style="background-image: url('/static/main/img/home.png');"></span></dt>
+            <dd class="footer_spandd">主页</dd>
+        </dl>
+        <div id="dhome" class="markdiamond"></div>
+    </a>
+{#    <a id="footermarket" class="footer_a" href="/market/103532/0/0/">#}
+    <a id="footermarket" class="footer_a" href="{% url 'axf:market' 103532 0 0 %}">
+        <dl>
+            <dt><span id="footer_span2" class="footer_span" style="background-image: url('/static/main/img/market.png');"></span></dt>
+            <dd class="footer_spandd">闪送超市</dd>
+        </dl>
+        <div id="dmarket" class="markdiamond"></div>
+    </a>
+    <a id="footercart" class="footer_a" href="{% url 'axf:cart' %}">
+        <dl>
+            <dt><span id="footer_span3" class="footer_span" style="background-image: url('/static/main/img/cart.png');"></span></dt>
+            <dd class="footer_spandd">购物车</dd>
+        </dl>
+        <div id="dcart" class="markdiamond"></div>
+    </a>
+    <a id="footermine" class="footer_a" href="{% url 'axf:mine' %}">
+        <dl>
+            <dt><span id="footer_span4" class="footer_span" style="background-image: url('/static/main/img/mine.png');"></span></dt>
+            <dd class="footer_spandd">我的</dd>
+        </dl>
+        <div id="dmine" class="markdiamond"></div>
+    </a>
+</footer>
+</body>
+</html>

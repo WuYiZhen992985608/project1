@@ -1,0 +1,11 @@
+{% extends 'axf/base.html' %}
+{% load static from staticfiles %}
+{% block linkscript %}
+    <link rel="stylesheet" type="text/css" href="{% static 'mine/css/ordernone.css' %}"/>
+{% endblock linkscript %}
+{% block base %}
+<div id="ordernone">
+<p>没有订单了！</p>
+<a href="{% url 'axf:orderlist' %}"><p>点我</p></a>
+</div>
+{% endblock base %}

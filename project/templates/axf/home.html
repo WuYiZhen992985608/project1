@@ -1,0 +1,189 @@
+{% extends 'axf/base.html' %}
+{% load static from staticfiles %}
+{% block linkscript %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/home.css' %}"/>
+    <script type="text/javascript" charset="utf-8" src="{% static 'home/js/home.js' %}"></script>
+
+{% endblock linkscript %}
+
+{% block base %}
+    <div id="home">
+        <section id="topSwiper" class="swiper-container">
+            <div class="swiper-wrapper">
+                {#                {% for item in wheelslist %}#}
+                {#                    <a href="#"><img src="{{ item.img }}"/></a>#}
+                {#                {% endfor %}#}
+                <div class="swiper-slide">
+                    <a href="#"><img src="/static/home/img/00001.jpg"/></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="/static/home/img/00002.jpg"/></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="/static/home/img/00003.jpg"/></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="/static/home/img/00004.jpg"/></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="/static/home/img/00005.jpg"/></a>
+                </div>
+            </div>
+            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"></div>
+        </section>
+        <section id="topMenu">
+            <nav>
+                <ul>
+                    {% for item in navlist %}
+                        <li>
+                            <a href="#">
+                                <img src="{{ item.img }}"/>
+                                <span>{{ item.name }}</span>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+            <menu class="swiper-container swiperMenu" id="swiperMenu">
+                <ul class="swiper-wrapper">
+                    {#                    {% for item in mustbuylist %}#}
+                    {#                        <li class="swiper-slide">#}
+                    {#                            <a href="#"><img src="{{ item.img }}" /></a>#}
+                    {#                        </li>#}
+                    {#                    {% endfor %}#}
+                    <li class="swiper-slide" style="width:3rem;">
+                        <a href="#"><img src="/static/home/img/20001.jpg"/></a>
+                    </li>
+                    <li class="swiper-slide" style="width:3rem;">
+                        <a href="#"><img src="/static/home/img/20002.jpg"/></a>
+                    </li>
+                    <li class="swiper-slide" style="width:3rem;">
+                        <a href="#"><img src="/static/home/img/20003.jpg"/></a>
+                    </li>
+                    <li class="swiper-slide" style="width:3rem;">
+                        <a href="#"><img src="/static/home/img/20004.jpg"/></a>
+                    </li>
+                </ul>
+                {#                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"></div>#}
+            </menu>
+        </section>
+        <section id="CVS">
+            <h2>
+                <img src="/static/home/img/便利店.jpg" alt="便利店"/>
+            </h2>
+            <fieldset>
+                {#                {% for x in shop2 %}#}
+                {#                    <a href="#" class="shop2list">#}
+                {#                    <img src="{{ x.img }}" alt="{{ x.name }}" />#}
+                {#                    </a>#}
+                {#                {% endfor %}#}
+                <div style="background-image: url('https://img14.360buyimg.com/n0/jfs/t3073/126/4493743873/517871/e97991e3/5847bf31N86100938.jpg')">
+                    <a href="#" class="shop2list">
+                        热销Top榜
+                    </a>
+                </div>
+                <div style="background-image: url('https://img14.360buyimg.com/n0/jfs/t1/137792/11/750/468345/5ee8273bE6dbe1a57/5389d77b2fdb3c67.jpg')">
+                    <a href="#" class="shop2list">
+                        新品尝鲜
+                    </a>
+                </div>
+            </fieldset>
+            <ul>
+                {#                {% for x in shop3 %}#}
+                {#                    <li>#}
+                {#                    <a href="#">#}
+                {#                        <img src="{{ x.img }}" />#}
+                {#                        <span>{{ x.name }}</span>#}
+                {#                    </a>#}
+                {#                    </li>#}
+                {#                {% endfor %}#}
+                <li>
+                    <a href="#">
+                        <img src="/static/home/img/20001.JPG"/>
+                        <div><span>百香果</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/static/home/img/20002.JPG"/>
+                        <div><span>杨梅</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/static/home/img/20003.JPG"/>
+                        <div><span>樱桃</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/static/home/img/20004.JPG"/>
+                        <div><span>荔枝</span></div>
+                    </a>
+                </li>
+            </ul>
+            <div id="olblock"></div>
+            <ol>
+                {#                {% for x in shop4 %}#}
+                {#                    <li><a href="#"><img src="{{ x.img }}" alt="{{ x.name }}"/></a></li>#}
+                {#                {% endfor %}#}
+                {#                    <li><a href="#"><img src="/static/home/img/20001.JPG" /></a></li>#}
+                <li>
+                    <a href="#">
+                        <img src="/static/home/img/20004.JPG"/>
+                        <b>鲜蜂力荐</b>
+                    </a>
+                </li>
+                <li><a href="#"><img src="/static/home/img/20002.JPG"/>
+                    <b>鸭货不能停</b>
+                <li><a href="#"><img src="/static/home/img/20001.JPG"/>
+                    <b>办公室零嘴</b>
+                <li><a href="#"><img src="/static/home/img/20003.JPG"/>
+                    <b>嗨购整箱</b>
+            </ol>
+        </section>
+                <section id="mainInfo">
+                {% for item in mainlist %}
+                    <section>
+                    <div class="shopheader">
+                        <span>{{ item.name }}</span>
+                        <a ui-sref="#">更多>></a>
+                        <span></span>
+                    </div>
+                    <div>
+                        <a href="#"><img src="/static/home/img/优选水果.jpg" alt="瓜果鲜香" /></a>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="/static/home/img/西瓜.jpg" />
+                                <p class="description">{{ item.longname1 }}</p>
+                                <p>￥{{ item.price1 }}</p>
+                                <s>￥{{ item.marketprice1 }}</s>
+                            </a>
+                            <button><span>&#43;</span></button>
+                        </li>
+                        <li style="background-color: #ecffa9">
+                            <a href="#">
+                                <img src="/static/home/img/火龙果.jpg" />
+                                <p class="description">{{ item.longname2 }}</p>
+                                <p>￥{{ item.price2 }}</p>
+                                <s>￥{{ item.marketprice2 }}</s>
+                            </a>
+                            <button><span>&#43;</span></button>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/static/home/img/海南千禧圣女果.jpg" />
+                                <p class="description">{{ item.longname3 }}</p>
+                                <p>￥{{ item.price3 }}</p>
+                                <s>￥{{ item.marketprice3 }}</s>
+                            </a>
+                            <button><span>&#43;</span></button>
+                        </li>
+                    </ul>
+                    </section>
+                {% endfor %}
+            </section>
+    </div>
+{% endblock base %}
