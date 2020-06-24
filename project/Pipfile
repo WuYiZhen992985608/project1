@@ -1,0 +1,21 @@
+﻿[[source]]
+name = "pypi"
+url = "http://pypi/org/simple"
+verify_ssl = true
+
+
+[dev-packages]
+
+[packages]
+django = "*"
+
+markdown ="*"
+
+
+
+
+
+
+
+[requires]
+python_version = "3.6"
