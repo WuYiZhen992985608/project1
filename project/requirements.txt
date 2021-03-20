@@ -45,7 +45,7 @@ importlib-resources==1.5.0
 incremental==17.5.0
 itsdangerous==1.1.0
 jdcal==1.4.1
-Jinja2==2.11.2
+Jinja2==2.11.3
 kaitaistruct==0.8
 kombu==3.0.37
 ldap3==2.7
